@@ -1,4 +1,4 @@
-//This is a sender class that will send packets to the receiver
+package UDP;//This is a sender class that will send packets to the receiver
 //The Sender will only proceed to send the next packet once the responsePacket is received
 import java.net.*;
 
@@ -10,7 +10,7 @@ class UDPSender{
 
         try{
 
-            InetAddress address = InetAddress.getByName("yourIP");
+            InetAddress address = InetAddress.getByName("2001:630:d0:5010:25f7:b44f:70fc:857f");
             socket = new DatagramSocket();
             byte[] responseArr = new byte[1];
 

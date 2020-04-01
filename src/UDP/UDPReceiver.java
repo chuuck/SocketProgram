@@ -1,4 +1,4 @@
-//This is the receiver class that waits for a packet from sender, once that is finished it will send a responsePacket as confirmation that the packet has been received.
+package UDP;//This is the receiver class that waits for a packet from sender, once that is finished it will send a responsePacket as confirmation that the packet has been received.
 import java.net.*;
 import java.util.ArrayList;
 
@@ -22,6 +22,7 @@ class UDPReceiver{
                 System.out.println("receive DatagramPacket " + (new String(packet.getData())).trim() + " " + packet.getAddress() + ":" + packet.getPort());
 
                 DatagramPacket responsePacket = new DatagramPacket(responseArr, responseArr.length, packet.getAddress(), packet.getPort());
+                System.out.println("sending responsePocket " + (new String(responsePacket.getData())).trim() + " " + responsePacket.getAddress() + ":" + responsePacket.getPort());
                 socket.send(responsePacket);
 
 
