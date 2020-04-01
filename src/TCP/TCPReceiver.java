@@ -14,13 +14,14 @@ class TCPReceiver {
             //infinite loop so that receiver is always waiting for a package to be transferred
             for(;;){
 
-                try{Socket client = ss.accept();
+                try{
+                    Socket client = ss.accept();
 
                     BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
                     String line;
 
                     while((line = in.readLine()) != null)
-                        System.out.println(line + " received");
+                        System.out.println(line + " received" );
                     client.close();
 
                 } catch(Exception e){
