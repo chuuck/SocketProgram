@@ -9,7 +9,7 @@ class TCPSender{
 
         try{
 
-            Socket socket = new Socket("2001:630:d0:5010:65d4:42bd:4fe1:eee5",4322);
+            Socket socket = new Socket("yourIP",4322);
             PrintWriter out = new PrintWriter(socket.getOutputStream());
 
             for(int i = 0; i < 10; i++){
